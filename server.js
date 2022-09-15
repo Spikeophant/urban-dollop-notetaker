@@ -6,4 +6,12 @@ const app = express();
 
 app.use(express.static('./public'));
 
-app.get('/', path.join(__dirname, '/public/index.html'));
+app.get('/', (req, res) => {
+  res.file(path.join(__dirname, '/public/index.html'));
+});
+
+const port = process.env.PORT || 3001;
+app.listen(port, (err) => {
+  if (err) console.log('Error with express setup.');
+  console.log('Server is listening on Port', port);
+});
