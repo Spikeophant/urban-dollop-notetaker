@@ -5,6 +5,8 @@ const routes = require('./routes');
 //setup app.
 const app = express();
 
+app.use('/assets', express.static(path.join(__dirname, 'public/assets')));
+app.use(express.json());
 app.use(routes);
 
 const port = process.env.PORT || 3001;
