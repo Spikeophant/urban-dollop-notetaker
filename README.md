@@ -23,6 +23,7 @@ Use the hosting platform of your choice which can execute the server.js file in 
 ## Usage
 
 node server.js, it will then listen on 3001 by default or whatever port is supplied as an env var called PORT.
+Deployed at: [Heroku](https://dry-earth-88079.herokuapp.com/)
 
 ## Credits and Questions
 
